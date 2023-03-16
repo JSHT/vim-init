@@ -16,6 +16,8 @@
 所以网上缺一份合理的轻量级配置，适合新人学习那种，于是有了这个项目。
 
 
+
+
 # 安装
 
 将项目克隆到你喜欢的目录内，比如 `~/.vim` 内：
@@ -36,6 +38,23 @@ source ~/.vim/vim-init/init.vim
 [终端软件下正确支持 ALT 键和 Backspace 键](https://github.com/skywind3000/vim-init/wiki/Setup-terminals-to-support-ALT-and-Backspace-correctly)
 
 然后启动 Vim，在命令行运行 `:PlugInstall` 安装依赖插件即可。
+
+手动安装YouCompleteMe
+##（从gitee下载YouCompleteMe，解决github下载慢的问题，已克隆YouCompleteMe的仓库及子模块到gitee上，2020年3月7日10:22:24）
+
+```bash
+sudo apt-get install cmake
+cd ~/.vim/bundles
+git clone https://github.com/ycm-core/YouCompleteMe.git
+cd ~/.vim/bundles/YouCompleteMe
+python3 install.py --clang-completer
+```
+
+安装插件需要的第三方工具
+```bash
+sudo apt-get install clang-format
+sudo apt-get install silversearcher-ag ctags
+```
 
 # 结构
 
